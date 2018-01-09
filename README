@@ -1,0 +1,42 @@
+SYSTEM REQUIREMENTS
+====================
+* Ruby ^2.0
+* Test Unit Gem
+
+
+FEATURES
+========
+Provides the distance of the routes and the shortest route.
+
+PROBLEM
+======
+A ferrovia de passageiros local presta serviços a várias cidades. Por motivos monetários, todas as linhas de trens seguem apenas em uma direção. Ou seja uma rota da cidade X para a cidade Y, não quer dizer que existe uma rota da cidade Y para a cidade X e mesmo se está rota existir seria uma linha ferroviária diferente que poderia ter até uma distância maior.
+O objetivo deste problema é ajudar a ferrovia a fornecer aos seus clientes informações sobre as rotas. Em particular, você irá calcular a distância ao longo de uma determinada rota, o número de rotas diferentes entre duas cidades e a rota mais curta entre duas cidades.
+Input:
+Um grafo direcionado onde um nó representa uma cidade e uma aresta representa uma rota entre duas cidades. A ponderação da aresta representa a distância entre as duas cidades. Uma determinada rota nunca aparecerá mais de uma vez para uma determinada viagem, a cidade inicial e final não serão as mesma cidade.
+Output:
+Para os valores de 1 a 5, se não existe tal rota, mostre como resultado algo como "NO SUCH ROUTE". Caso contrário, siga a rota indicada e não faça paradas extras! Por exemplo, o valor 1 a 5 significa que a viagem vai começar na cidade A, depois a viagem continuará diretamente para a cidade B (em uma distância de 5), então diretamente para a cidade C (em uma distância de 4).
+1. The distance of the route A-B-C.
+2. The distance of the route A-D.
+3. The distance of the route A-D-C.
+4. The distance of the route A-E-B-C-D.
+5. The distance of the route A-E-D.
+6. The number of trips starting at C and ending at C with a maximum of 3 stops.  In the sample data below, there are two such trips: C-D-C (2 stops). and C-E-B-C (3 stops).
+7. The number of trips starting at A and ending at C with exactly 4 stops.  In the sample data below, there are three such trips: A to C (via B,C,D); A to C (via D,C,D); and A to C (via D,E,B).
+8. The length of the shortest route (in terms of distance to travel) from A to C.
+9. The length of the shortest route (in terms of distance to travel) from B to B.
+10.The number of different routes from C to C with a distance of less than 30.  In the sample data, the trips are: CDC, CEBC, CEBCDC, CDCEBC, CDEBC, CEBCEBC, CEBCEBCEBC.
+Test Input:
+Para a entrada de dados de test, as cidades são nomeadas com as primeiras letras do alfabeto como A, B, C e D. A ditancia de uma rota entre duas cidades (A para B) tera uma distancia de 5, então este valor será respresentado da seguinte maneira AB5.
+Grafo de test: AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
+Output Esperado:
+Output #1: 9
+Output #2: 5
+Output #3: 13
+Output #4: 22
+Output #5: NO SUCH ROUTE
+Output #6: 2
+Output #7: 3
+Output #8: 9
+Output #9: 9
+Output #10: 7
